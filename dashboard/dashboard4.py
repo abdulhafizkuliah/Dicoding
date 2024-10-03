@@ -51,7 +51,7 @@ max_date = df_2017_2018["order_purchase_date"].max()
  
 with st.sidebar:
     # Menambahkan logo perusahaan
-    st.image("bangkitmantap.jpg")
+    st.image("dashboard/bangkitmantap.jpg")
     
     # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
