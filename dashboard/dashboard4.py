@@ -1,13 +1,8 @@
 #import library
 import streamlit as st 
-#import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import warnings
-
-# Hapus peringatan yang tidak perlu
-warnings.simplefilter(action='ignore', category=FutureWarning)
 
 # Load datasets
 customers_df = pd.read_csv('dashboard/customers_dataset.csv')
