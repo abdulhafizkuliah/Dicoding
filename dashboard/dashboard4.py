@@ -10,15 +10,14 @@ import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 # Load datasets
-customers_df = pd.read_csv('customers_dataset.csv')
-geolocation_df = pd.read_csv('geolocation_dataset.csv')
-order_items_df = pd.read_csv('order_items_dataset.csv')
-order_payments_df = pd.read_csv('order_payments_dataset.csv')
-order_reviews_df = pd.read_csv('order_reviews_dataset.csv')
-orders_df = pd.read_csv('orders_dataset.csv')
-product_category_name_translation_df = pd.read_csv('product_category_name_translation.csv')
-products_df = pd.read_csv('products_dataset.csv')
-sellers_df = pd.read_csv('sellers_dataset.csv')
+customers_df = pd.read_csv('dashboard/customers_dataset.csv')
+order_items_df = pd.read_csv('dashboard/order_items_dataset.csv')
+order_payments_df = pd.read_csv('dashboard/order_payments_dataset.csv')
+order_reviews_df = pd.read_csv('dashboard/order_reviews_dataset.csv')
+orders_df = pd.read_csv('dashboard/orders_dataset.csv')
+product_category_name_translation_df = pd.read_csv('dashboard/product_category_name_translation.csv')
+products_df = pd.read_csv('dashboard/products_dataset.csv')
+sellers_df = pd.read_csv('dashboard/sellers_dataset.csv')
 
 # Convert 'order_purchase_timestamp' to datetime
 orders_df['order_purchase_timestamp'] = pd.to_datetime(orders_df['order_purchase_timestamp'])
@@ -62,7 +61,7 @@ max_date = df_2017_2018["order_purchase_date"].max()
  
 with st.sidebar:
     # Menambahkan logo perusahaan
-    st.image("bangkitmantap.jpg")
+    st.image("dashboard/bangkitmantap.jpg")
     
     # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
